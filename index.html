@@ -4,10 +4,16 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>M-Zohaib Abbas</title>
-		   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-		<link rel="stylesheet" href="./css/style.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+		<link rel="stylesheet" href="./css/style.css" />\
+		  <script>
+      if (window.innerWidth <= 768) {
+          window.location.href = "mobile.html";
+      }
+    </script>
 	</head>
 	<body>
+		
 	     <header>
         <div class="header">
             <div class="logo">ZOHAIB</div>
@@ -25,13 +31,13 @@
 
         <div class="hero-section">
             <div>
-                <h2 class="intro" data-i18n="intro">I'm Muhammad Zohaib Abbas<br /><span class="role">MERN Stack</span>
+                <h2 class="intro" data-i18n="intro">I'm Muhammad Zohaib Abbas<br/><span class="role">MERN Stack</span>
                     Developer
                 </h2>
                 <p class="description" data-i18n="description">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br />
-                    Et, volutpat feugiat placerat lobortis. <br />
-                    Natoque rutrum semper sed suspendisse nunc lectus.
+                  I build clean, responsive, high-performance 
+				  <br>solutions with modern technologies
+				  <br>Turning ideas into seamless digital experiences.
                 </p>
                 <button class="btn-1" data-i18n="hireMe">Hire me</button>
             </div>
@@ -43,7 +49,7 @@
                 />
             </div>
         </div>
-    </header>
+    	</header>
 
 		<main>
 			<section class="services-container" id="services">
@@ -57,7 +63,7 @@
 				</div>
 
 				<div class="my-services">
-					<div class="services-card">
+					<div class="services-card" id="web-development">
 						<img
 							src="./images/Icons/coding.png"
 							alt="Web Development"
@@ -69,7 +75,7 @@
 							suspendisse nunc lectus.
 						</p>
 					</div>
-					<div class="services-card">
+					<div class="services-card" id="game-development">
 						<img
 							src="./images/Icons/game-development.png"
 							alt="Game Development"
@@ -81,7 +87,7 @@
 							suspendisse nunc lectus.
 						</p>
 					</div>
-					<div class="services-card">
+					<div class="services-card" id="photographer">
 						<img
 							src="./images/Icons/Photographer.png"
 							alt="Photographer"
@@ -93,7 +99,7 @@
 							suspendisse nunc lectus.
 						</p>
 					</div>
-					<div class="services-card">
+					<div class="services-card" id="illustration">
 						<img
 							src="./images/Icons/illustration.png"
 							alt="Illustration"
@@ -105,7 +111,7 @@
 							suspendisse nunc lectus.
 						</p>
 					</div>
-					<div class="services-card">
+					<div class="services-card" id="sound-design">
 						<img
 							src="./images/Icons/Microphone.png"
 							alt="Sound Design"
@@ -117,7 +123,7 @@
 							suspendisse nunc lectus.
 						</p>
 					</div>
-					<div class="services-card">
+					<div class="services-card" id="advertisement">
 						<img
 							src="./images/Icons/Ad-pop-up.png"
 							alt="Advertisement"
@@ -972,22 +978,22 @@
             <div class="footer-section">
                 <h3 class="footer-heading">Quick Links</h3>
                 <ul class="footer-links">
-                    <li><a href="#"><i class="fas fa-chevron-right"></i> Home</a></li>
-                    <li><a href="#"><i class="fas fa-chevron-right"></i> Services</a></li>
-                    <li><a href="#"><i class="fas fa-chevron-right"></i> Projects</a></li>
-                    <li><a href="#"><i class="fas fa-chevron-right"></i> Testimonials</a></li>
-                    <li><a href="#"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                    <li><a href="#home"><i class="fas fa-chevron-right"></i> Home</a></li>
+                    <li><a href="#servies"><i class="fas fa-chevron-right"></i> Services</a></li>
+                    <li><a href="#projects"><i class="fas fa-chevron-right"></i> Projects</a></li>
+                    <li><a href="#testimonials"><i class="fas fa-chevron-right"></i> Testimonials</a></li>
+                    <li><a href="#contact"><i class="fas fa-chevron-right"></i> Contact</a></li>
                 </ul>
             </div>
             
             <div class="footer-section">
                 <h3 class="footer-heading">Services</h3>
                 <ul class="footer-links">
-                    <li><a href="#"><i class="fas fa-chevron-right"></i> Web Development</a></li>
-                    <li><a href="#"><i class="fas fa-chevron-right"></i> Game Development</a></li>
-                    <li><a href="#"><i class="fas fa-chevron-right"></i> UI/UX Design</a></li>
-                    <li><a href="#"><i class="fas fa-chevron-right"></i> Mobile Apps</a></li>
-                    <li><a href="#"><i class="fas fa-chevron-right"></i> SEO Optimization</a></li>
+                    <li><a href="#web-development"><i class="fas fa-chevron-right"></i> Web Development</a></li>
+                    <li><a href="#game-development"><i class="fas fa-chevron-right"></i> Game Development</a></li>
+                    <li><a href="#sound-design"><i class="fas fa-chevron-right"></i> Sound Design</a></li>
+                    <li><a href="#illustration"><i class="fas fa-chevron-right"></i> illustraion</a></li>
+                    <li><a href="#photographer"><i class="fas fa-chevron-right"></i> Photographer</a></li>
                 </ul>
             </div>
         </div>

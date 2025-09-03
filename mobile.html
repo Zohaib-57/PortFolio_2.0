@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Muhammad Zohaib Abbas - Portfolio</title>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+		/>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+				font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+			}
+
+			body {
+				background: #e4e6eb;
+				color: #18191a;
+				line-height: 1.6;
+			}
+
+			.container {
+				max-width: 100%;
+				padding: 20px;
+			}
+
+			header {
+				background: #3a3b3c;
+				color: white;
+				padding: 30px 20px;
+				text-align: center;
+				border-radius: 0 0 20px 20px;
+				margin-bottom: 20px;
+				box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+			}
+
+			.profile-img {
+				width: 120px;
+				height: 120px;
+				border-radius: 50%;
+				border: 4px solid #ffb400;
+				margin: 0 auto 15px;
+				background: #767676;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				overflow: hidden;
+			}
+
+			.profile-img i {
+				font-size: 50px;
+				color: #e4e6eb;
+			}
+
+			h1 {
+				font-size: 24px;
+				margin-bottom: 5px;
+				font-weight: 600;
+				color: #ffb400;
+			}
+
+			.tagline {
+				font-size: 16px;
+				opacity: 0.9;
+				font-weight: 300;
+				margin-bottom: 10px;
+			}
+
+			.profile-summary {
+				font-size: 14px;
+				margin-top: 10px;
+				line-height: 1.5;
+				color: #e4e6eb;
+			}
+
+			.section {
+				background: white;
+				border-radius: 12px;
+				padding: 20px;
+				margin-bottom: 20px;
+				box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+				border-left: 4px solid #ffb400;
+			}
+
+			h2 {
+				font-size: 18px;
+				margin-bottom: 15px;
+				color: #3a3b3c;
+				display: flex;
+				align-items: center;
+				padding-bottom: 8px;
+				border-bottom: 1px solid #eaeaea;
+			}
+
+			h2 i {
+				margin-right: 10px;
+				color: #ffb400;
+			}
+
+			.progress-container {
+				margin-bottom: 15px;
+			}
+
+			.progress-label {
+				display: flex;
+				justify-content: space-between;
+				margin-bottom: 5px;
+				font-size: 14px;
+			}
+
+			.progress-bar {
+				height: 8px;
+				background: #e4e6eb;
+				border-radius: 4px;
+				overflow: hidden;
+			}
+
+			.progress-fill {
+				height: 100%;
+				border-radius: 4px;
+				background: #ffb400;
+				transition: width 1s ease-in-out;
+			}
+
+			.skills-grid {
+				display: grid;
+				grid-template-columns: repeat(2, 1fr);
+				gap: 10px;
+			}
+
+			.skill-chip {
+				background: #fef6e0;
+				padding: 10px 12px;
+				border-radius: 18px;
+				text-align: center;
+				font-size: 13px;
+				color: #3a3b3c;
+				border: 1px solid #ffb400;
+			}
+
+			.extra-skills {
+				list-style-type: none;
+			}
+
+			.extra-skills li {
+				padding: 10px 0;
+				border-bottom: 1px solid #f1f1f1;
+				display: flex;
+				align-items: center;
+				font-size: 14px;
+			}
+
+			.extra-skills li:last-child {
+				border-bottom: none;
+			}
+
+			.extra-skills li i {
+				margin-right: 10px;
+				color: #ffb400;
+			}
+
+			.social-links {
+				display: flex;
+				justify-content: center;
+				gap: 15px;
+				margin-top: 20px;
+			}
+
+			.social-links a {
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				width: 45px;
+				height: 45px;
+				background: #3a3b3c;
+				color: #ffb400;
+				border-radius: 50%;
+				text-decoration: none;
+				font-size: 20px;
+				transition: all 0.3s ease;
+			}
+
+			.social-links a:hover {
+				background: #ffb400;
+				color: #3a3b3c;
+				transform: translateY(-3px);
+			}
+
+			.download-btn {
+				display: block;
+				width: 100%;
+				padding: 15px;
+				background: #ffb400;
+				color: #3a3b3c;
+				border: none;
+				border-radius: 10px;
+				font-size: 16px;
+				font-weight: 600;
+				margin-top: 20px;
+				cursor: pointer;
+				box-shadow: 0 4px 10px rgba(255, 180, 0, 0.3);
+				transition: all 0.3s ease;
+			}
+
+			.download-btn:hover {
+				transform: translateY(-2px);
+				box-shadow: 0 6px 14px rgba(255, 180, 0, 0.4);
+			}
+
+			.download-btn i {
+				margin-right: 8px;
+			}
+
+			footer {
+				text-align: center;
+				padding: 20px;
+				font-size: 14px;
+				color: #767676;
+				margin-top: 20px;
+			}
+
+			/* Responsive adjustments */
+			@media (max-width: 480px) {
+				.container {
+					padding: 15px;
+				}
+
+				header {
+					padding: 25px 15px;
+				}
+
+				.profile-img {
+					width: 100px;
+					height: 100px;
+				}
+
+				h1 {
+					font-size: 22px;
+				}
+
+				.section {
+					padding: 15px;
+				}
+
+				.skills-grid {
+					grid-template-columns: 1fr;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<header>
+				<div class="profile-container">
+					<div class="profile-img">
+						<img
+							src="./images/image-2.jpg"
+							alt="Muhammad Zohaib Abbas"
+							style="width: 100%; height: 100%; object-fit: cover"
+						/>
+					</div>
+					<div class="profile-badge">
+						<i class="fas fa-award"></i>
+					</div>
+				</div>
+
+				<h1>Muhammad Zohaib Abbas</h1>
+				<p class="tagline">Web Developer & Software Engineer</p>
+
+				<div class="expertise-tags">
+					<span class="expertise-tag">Frontend</span>
+					<span class="expertise-tag">Backend</span>
+					<span class="expertise-tag">React</span>
+					<span class="expertise-tag">Node.js</span>
+					<span class="expertise-tag">MongoDB</span>
+				</div>
+
+				<div class="profile-highlights">
+					<div class="highlight-item">
+						<i class="fas fa-bolt"></i>
+						<span>Modern Web Applications</span>
+					</div>
+					<div class="highlight-item">
+						<i class="fas fa-mobile-alt"></i>
+						<span>Responsive Design</span>
+					</div>
+					<div class="highlight-item">
+						<i class="fas fa-users"></i>
+						<span>User-Focused</span>
+					</div>
+				</div>
+			</header>
+
+			<div class="section">
+				<h2><i class="fas fa-briefcase"></i> Projects</h2>
+				<div class="progress-container">
+					<div class="progress-label">
+						<span><i class="fas fa-code"></i> Quiz Competition Web App</span>
+					</div>
+					<div class="progress-bar">
+						<div class="progress-fill" style="width: 95%"></div>
+					</div>
+					<p style="font-size: 13px; margin-top: 5px; color: #767676">
+						Full-stack project with user authentication, quiz participation,
+						leaderboard, and wallet system.
+					</p>
+				</div>
+				<div class="progress-container">
+					<div class="progress-label">
+						<span><i class="fas fa-laptop-code"></i> Portfolio Website</span>
+					</div>
+					<div class="progress-bar">
+						<div class="progress-fill" style="width: 90%"></div>
+					</div>
+					<p style="font-size: 13px; margin-top: 5px; color: #767676">
+						Personal portfolio showcasing skills, projects, and contact
+						information.
+					</p>
+				</div>
+				<div class="progress-container">
+					<div class="progress-label">
+						<span><i class="fas fa-globe"></i> Other Web Projects</span>
+					</div>
+					<div class="progress-bar">
+						<div class="progress-fill" style="width: 85%"></div>
+					</div>
+					<p style="font-size: 13px; margin-top: 5px; color: #767676">
+						Various small-scale projects using HTML, CSS, JavaScript, and React.
+					</p>
+				</div>
+			</div>
+
+			<div class="section">
+				<h2><i class="fas fa-language"></i> Languages</h2>
+				<div class="progress-container">
+					<div class="progress-label">
+						<span><i class="fas fa-flag-usa"></i> English</span>
+						<span>95%</span>
+					</div>
+					<div class="progress-bar">
+						<div class="progress-fill" style="width: 95%"></div>
+					</div>
+				</div>
+				<div class="progress-container">
+					<div class="progress-label">
+						<span><i class="fas fa-flag"></i> Urdu</span>
+						<span>100%</span>
+					</div>
+					<div class="progress-bar">
+						<div class="progress-fill" style="width: 100%"></div>
+					</div>
+				</div>
+				<div class="progress-container">
+					<div class="progress-label">
+						<span><i class="fas fa-flag"></i> Pashtoo</span>
+						<span>100%</span>
+					</div>
+					<div class="progress-bar">
+						<div class="progress-fill" style="width: 100%"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="section">
+				<h2><i class="fas fa-code"></i> Skills</h2>
+				<div class="skills-grid">
+					<div class="skill-chip"><i class="fab fa-html5"></i> HTML</div>
+					<div class="skill-chip"><i class="fab fa-css3-alt"></i> CSS</div>
+					<div class="skill-chip"><i class="fab fa-js"></i> JavaScript</div>
+					<div class="skill-chip">
+						<i class="fab fa-react"></i> Frontend Web Development
+					</div>
+					<div class="skill-chip">
+						<i class="fab fa-node-js"></i> Backend Web Development
+					</div>
+					<div class="skill-chip"><i class="fab fa-git"></i> Git</div>
+					<div class="skill-chip">
+						<i class="fab fa-wordpress"></i> WordPress
+					</div>
+					<div class="skill-chip"><i class="fas fa-code"></i> VS Code</div>
+				</div>
+			</div>
+
+			<div class="section">
+				<h2><i class="fas fa-star"></i> Extra Skills & Interests</h2>
+				<ul class="extra-skills">
+					<li>
+						<i class="fas fa-puzzle-piece"></i> Problem-solving & algorithmic
+						thinking
+					</li>
+					<li>
+						<i class="fas fa-bug"></i> Debugging & performance optimization
+					</li>
+					<li>
+						<i class="fas fa-bolt"></i> Learning new frameworks and libraries
+						quickly
+					</li>
+					<li><i class="fas fa-handshake"></i> Open-source contribution</li>
+				</ul>
+			</div>
+
+			<div class="section">
+				<h2><i class="fas fa-envelope"></i> Contact Information</h2>
+
+				<div class="social-links">
+					<a href="https://github.com/Zohaib-57"
+						><i class="fab fa-github"></i
+					></a>
+					<a href="www.linkedin.com/in/muhammad-zohaib-abbas57"
+						><i class="fab fa-linkedin"></i
+					></a>
+					<a href="mailto:zohaibabbas8557@gmail.com"
+						><i class="fas fa-envelope"></i
+					></a>
+				</div>
+			</div>
+
+			<a
+				href="assets/Muhammad Zohaib Abbas.pdf"
+				download
+				style="text-decoration: none"
+			>
+				<button class="download-btn">
+					<i class="fas fa-download"></i> Download CV
+				</button>
+			</a>
+		</div>
+
+		<footer>
+			<p>© 2023 Muhammad Zohaib Abbas. All rights reserved.</p>
+		</footer>
+
+		<script>
+			document.addEventListener("DOMContentLoaded", function () {
+				const progressBars = document.querySelectorAll(".progress-fill");
+
+				progressBars.forEach((bar) => {
+					const width = bar.style.width;
+					bar.style.width = "0";
+
+					setTimeout(() => {
+						bar.style.transition = "width 1s ease-in-out";
+						bar.style.width = width;
+					}, 300);
+				});
+
+				// Download button effect with actual file download
+				const downloadBtn = document.querySelector(".download-btn");
+				downloadBtn.addEventListener("click", function () {
+					// Show animation
+					this.innerHTML =
+						'<i class="fas fa-spinner fa-spin"></i> DOWNLOADING...';
+					this.style.background = "#3A3B3C";
+					this.style.color = "#FFB400";
+
+					// Trigger actual file download
+					const link = document.createElement("a");
+					link.href = "assets/Zohaib_CV.pdf"; // path to your CV
+					link.download = "Zohaib_CV.pdf";
+					document.body.appendChild(link);
+					link.click();
+					document.body.removeChild(link);
+
+					// Change button to complete after delay
+					setTimeout(() => {
+						this.innerHTML = '<i class="fas fa-check"></i> DOWNLOAD COMPLETE';
+					}, 2000);
+				});
+
+				// Social links alert
+				document.querySelectorAll(".social-links a").forEach((link) => {
+					link.addEventListener("click", function (e) {
+						e.preventDefault();
+						alert("Please update your social links in the HTML code!");
+					});
+				});
+			});
+		</script>
+	</body>
+</html>
