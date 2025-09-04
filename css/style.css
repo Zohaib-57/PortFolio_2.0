@@ -985,38 +985,6 @@ body.dark-mode .services-card {
 	margin: 30px auto 0;
 	line-height: 1.6;
 }
-
-.projects-filter {
-	display: flex;
-	justify-content: center;
-	flex-wrap: wrap;
-	gap: 15px;
-	margin-bottom: 50px;
-}
-
-.filter-btn {
-	padding: 12px 25px;
-	background: white;
-	border: none;
-	border-radius: 30px;
-	font-size: 1rem;
-	font-weight: 600;
-	cursor: pointer;
-	transition: all 0.3s ease;
-	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-}
-
-.filter-btn:hover {
-	background: #ffb400;
-	color: white;
-	transform: translateY(-3px);
-}
-
-.filter-btn.active {
-	background: #ffb400;
-	color: white;
-}
-
 .projects-grid {
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
